@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -12,12 +14,30 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    public int display=0;
+    public String display="0";
+    private TextView calculatorScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        calculatorScreen= (TextView) findViewById(R.id.calc_screen);
+    }
+
+    public void updateDisplay(View view){
+//        Log.d(TAG, );
+        display=(String) calculatorScreen.getText();
+        Button b=(Button) view;
+        String buttonText= b.getText().toString();
+        if (display.equals("0")){
+            Log.d(TAG, buttonText);
+            display=buttonText;
+            calculatorScreen.setText(display);
+        }
+        else{
+            display+=buttonText;
+            calculatorScreen.setText(display);
+        }
     }
 
     public void add(){
