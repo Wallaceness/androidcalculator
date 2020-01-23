@@ -1,14 +1,15 @@
 package com.example.android.calculatorapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         calculatorScreen = (TextView) findViewById(R.id.calc_screen);
+        if (savedInstanceState!=null){
+            display = savedInstanceState.getString("display");
+            storedNumber = savedInstanceState.getString("storedNumber");
+            storedOperation = savedInstanceState.getString("storedOperation");
+            operationLast = savedInstanceState.getBoolean("operationLast");
+            calculatorScreen.setText(display);
+        }
     }
 
     public void updateDisplay(View view){
@@ -34,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
         String buttonText= b.getText().toString();
         if (operationLast){
             storedNumber=display;
-            display=buttonText;
+            if (buttonText.equals(".")){
+                display="0"+buttonText;
+            }
+            else{
+                display=buttonText;
+            }
             calculatorScreen.setText(display);
             operationLast=false;
         }
@@ -73,26 +86,27 @@ public class MainActivity extends AppCompatActivity {
             double storedValue= Double.parseDouble(storedNumber);
             double displayValue=Double.parseDouble(display);
             double result;
-            if (storedOperation.equals("+")){
-                result=add(storedValue, displayValue);
-            }
-            else if (storedOperation.equals("-")){
-                result=subtract(storedValue, displayValue);
-            }
-            else if (storedOperation.equals("x")){
-                result=multiply(storedValue, displayValue);
-            }
-            else if (storedOperation.equals("÷")){
-                result=divide(storedValue, displayValue);
-            }
-            else if (storedOperation.equals("^")){
-                result=power(storedValue, displayValue);
-            }
-            else if (storedOperation.equals("√")){
-                result=squareRoot(storedValue, displayValue);
-            }
-            else{
-                result=0;
+            switch(storedOperation) {
+                case "+":
+                    result = add(storedValue, displayValue);
+                    break;
+                case "-":
+                    result = subtract(storedValue, displayValue);
+                    break;
+                case "x":
+                    result = multiply(storedValue, displayValue);
+                    break;
+                case "÷":
+                    result = divide(storedValue, displayValue);
+                    break;
+                case "^":
+                    result = power(storedValue, displayValue);
+                    break;
+                case "√":
+                    result = squareRoot(storedValue, displayValue);
+                    break;
+                default:
+                    result = 0;
             }
             display=Double.toString(result);
             calculatorScreen.setText(display);
@@ -123,5 +137,14 @@ public class MainActivity extends AppCompatActivity {
 
     protected double squareRoot(double number, double exponent){
         return Math.pow(number, 1/exponent);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("display", display);
+        outState.putString("storedNumber", storedNumber);
+        outState.putString("storedOperation", storedOperation);
+        outState.putBoolean("operationLast", operationLast);
     }
 }
