@@ -63,7 +63,8 @@
                 android:text="@string/allclear"
                 android:textSize="16pt"
                 android:background="@color/orange_red"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="AC"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -71,7 +72,8 @@
                 android:text="@string/plus"
                 android:textSize="16pt"
                 android:background="@color/orange"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="operation"/>
 
         </LinearLayout>
 
@@ -116,7 +118,8 @@
                 android:text="@string/minus"
                 android:textSize="16pt"
                 android:background="@color/orange"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="operation"/>
 
         </LinearLayout>
 
@@ -161,7 +164,8 @@
                 android:text="@string/multiply"
                 android:textSize="16pt"
                 android:background="@color/orange"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="operation"/>
 
         </LinearLayout>
 
@@ -206,7 +210,8 @@
                 android:text="@string/divide"
                 android:textSize="16pt"
                 android:background="@color/orange"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="operation"/>
 
         </LinearLayout>
 
@@ -223,7 +228,8 @@
                 android:text="@string/equals"
                 android:textSize="16pt"
                 android:background="@color/_light_green"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="onEquals"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -231,7 +237,8 @@
                 android:text="@string/squareroot"
                 android:textSize="16pt"
                 android:background="@color/orange"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="operation"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -239,7 +246,8 @@
                 android:text="@string/exponent"
                 android:textSize="16pt"
                 android:background="@color/orange"
-                android:layout_margin="2dp"/>
+                android:layout_margin="2dp"
+                android:onClick="operation"/>
 
         </LinearLayout>
 
