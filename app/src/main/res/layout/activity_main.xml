@@ -9,7 +9,7 @@
         tools:context=".MainActivity"
         android:weightSum="6"
         android:orientation="vertical"
-        android:background="@color/light_grey">
+        android:background="@drawable/rounded_corners_grey">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,12 +19,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/light_grey"
+                android:background="@drawable/rounded_corners_grey"
                 android:text="@string/zero"
                 android:textSize="18pt"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:id="@+id/calc_screen" />
+                android:id="@+id/calc_screen"
+                />
 
 
         </LinearLayout>
@@ -42,7 +43,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/zero"
                 android:textSize="16pt" />
@@ -53,7 +54,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/decimal"
                 android:textSize="16pt" />
@@ -63,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/orange_red"
+                android:background="@drawable/rounded_corners_red"
                 android:onClick="AC"
                 android:text="@string/allclear"
                 android:textSize="16pt" />
@@ -73,7 +74,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_corners_orange"
                 android:onClick="operation"
                 android:text="@string/plus"
                 android:textSize="16pt" />
@@ -92,7 +93,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/one"
                 android:textSize="16pt" />
@@ -102,7 +103,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/two"
                 android:textSize="16pt" />
@@ -112,7 +113,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/three"
                 android:textSize="16pt" />
@@ -122,7 +123,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_corners_orange"
                 android:onClick="operation"
                 android:text="@string/minus"
                 android:textSize="16pt" />
@@ -141,7 +142,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/four"
                 android:textSize="16pt" />
@@ -151,7 +152,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/five"
                 android:textSize="16pt" />
@@ -161,7 +162,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/six"
                 android:textSize="16pt" />
@@ -171,7 +172,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_corners_orange"
                 android:onClick="operation"
                 android:text="@string/multiply"
                 android:textSize="16pt" />
@@ -190,7 +191,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/seven"
                 android:textSize="16pt" />
@@ -200,7 +201,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/eight"
                 android:textSize="16pt" />
@@ -210,7 +211,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/light_sky_blue"
+                android:background="@drawable/rounded_corners_blue"
                 android:onClick="updateDisplay"
                 android:text="@string/nine"
                 android:textSize="16pt" />
@@ -220,7 +221,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_corners_orange"
                 android:onClick="operation"
                 android:text="@string/divide"
                 android:textSize="16pt" />
@@ -239,7 +240,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:background="@color/_light_green"
+                android:background="@drawable/rounded_corners_green"
                 android:onClick="onEquals"
                 android:text="@string/equals"
                 android:textSize="16pt" />
@@ -249,7 +250,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1.5"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_corners_orange"
                 android:onClick="operation"
                 android:text="@string/squareroot"
                 android:textSize="16pt" />
@@ -259,11 +260,10 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1.5"
-                android:background="@color/orange"
+                android:background="@drawable/rounded_corners_orange"
                 android:onClick="operation"
                 android:text="@string/exponent"
                 android:textSize="16pt" />
 
         </LinearLayout>
-
-    </LinearLayout>
+</LinearLayout>
